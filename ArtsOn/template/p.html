@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zxx">
+   <head>
+        <style>
+            img.groove {border-style: groove;}
+           body{
+<!--    background: -webkit-linear-gradient(left, #3931af, #00c6ff);-->
+<!--    background-image:url('static/assets/images/drumb.jpg');-->
+}
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
+
+<!--/* Button used to open the contact form - fixed at the bottom of the page */-->
+<!--.open-button {-->
+<!--  background-color: #555;-->
+<!--  color: white;-->
+<!--  padding: 16px 20px;-->
+<!--  border: none;-->
+<!--  cursor: pointer;-->
+<!--  opacity: 0.8;-->
+<!--  position: fixed;-->
+<!--  bottom: 23px;-->
+<!--  right: 28px;-->
+<!--  width: 280px;-->
+<!--}-->
+
+/* The popup form - hidden by default */
+.form-popup {
+  margin: auto;
+
+  display: none;
+  position: fixed;
+  top:15%;
+  left:35%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 100%;
+  padding: 10px;
+
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 70%;
+  padding: 10px;
+
+  margin: 0px 10% 22px 20px;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+opacity:1;
+}
+
+       </style>
+       {% load static %}
+      <title>Sway An Entertainment Category Bootstrap Responsive Web Template | Home :: w3layouts</title>
+      <!--meta tags -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="Sway Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+      <script>
+         addEventListener("load", function () {
+         	setTimeout(hideURLbar, 0);
+         }, false);
+
+         function hideURLbar() {
+         	window.scrollTo(0, 1);
+         }
+      </script>
+
+      <!--//meta tags ends here-->
+      <!--booststrap-->
+      <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
+      <!--//booststrap end-->
+      <!-- font-awesome icons -->
+      <link href="{% static 'assets/css/fontawesome-all.min.css' %}" rel="stylesheet" type="text/css" media="all">
+      <!-- //font-awesome icons -->
+      <!--stylesheets-->
+      <link href="{% static 'assets/css/style.css' %}" rel='stylesheet' type='text/css' media="all">
+      <!--//stylesheets-->
+      <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+      <link href="//fonts.googleapis.com/css?family=Felipa" rel="stylesheet">
+   </head>
+   <body>
+   <br>
+
+
+<section id="service-details" class="service-details">
+      <div class="form-popup" id="myForm">
+  <form action="../edititem1/{{user.pk}}" class="form-container" align="center" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+      <h1 >edit profile</h1>
+<table>
+      <tr><td><label><b>name:</b></label></td>
+    <td><input type="text"  name="name" value="{{user.name}}" required></td></tr>
+
+      <tr><td><label><b>username:</b></label></td>
+    <td><input type="text"  name="username" value="{{user.username}}"  required></td></tr>
+
+      <tr><td><label><b>phone no:</b></label></td>
+    <td><input type="text"  name="phone" value="{{user.phone}}" required></td></tr>
+
+      <tr><td><label><b>email:</b></label></td>
+   <td> <input type="text"  name="email" value="{{user.email}}" required></td></tr>
+<tr>
+    <td colspan="4"></td>
+</tr>
+    <tr><td><label><b> profile:</b></label></td>
+    <td><input type="file"  name="profile" ></td></tr>
+    <tr ><td  colspan="2">
+        <br>
+      <button type="submit" class="btn btn-lg-5">save</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button></td></tr>
+
+
+        </table>
+  </form>
+</div>
+
+
+<div class="form-popup" id="myFor">
+  <form action="dabout" class="form-container" align="center" method="post" >
+        {% csrf_token %}
+
+    <h1 >edit details</h1>
+      <br>
+<table>
+      <tr><td><label><b>Location:</b></label></td>
+    <td><input type="text"  name="location" value="{{i.native}}" required></td></tr>
+
+      <tr><td><label><b>Specialisation:</b></label></td>
+    <td><input type="text"  name="special" value="{{i.special}}"></td></tr>
+
+      <tr><td><label><b>Achievements:</b></label></td>
+    <td><input type="text"  name="achievements" value="{{i.achievements}}"></td></tr>
+
+      <tr><td><label><b>About:</b></label></td>
+          <td> <textarea   name="disc"  value="{{i.disc}}" ></textarea></td></tr>
+
+    <tr><td><label><b>Experience:</b></label></td>
+   <td> <input type="number"  name="experience" value="{{i.experience}}" required></td></tr>
+
+    <tr><td><label><b>Price:</b></label></td>
+   <td> <input type="number"  name="price" value="{{i.fprice}}" required></td></tr>
+    <tr ><td  colspan="2">
+        <br>
+      <button type="submit" class="btn btn-lg-5">save</button>
+    <button type="button" class="btn cancel" onclick="closeFor()">Close</button></td></tr>
+</table>
+  </form>
+</div>
+
+<div class="form-popup" id="aForm">
+{% for i in data %}
+        <form action="editdd/{{i.pk}}"  class="form-container" align="center" method="post">
+            {% csrf_token %}
+
+
+    <h1>edit details</h1>
+
+    <table>
+
+      <tr><td><label><b>Location:</b></label></td>
+    <td><input type="text"  name="location" value="{{i.native}}"></td></tr>
+
+      <tr><td><label><b>specialisation:</b></label></td>
+    <td><input type="text"  name="special" value="{{i.special}}"  ></td></tr>
+
+      <tr><td><label><b>achievements:</b></label></td>
+    <td><input type="text"  name="achievements" value="{{i.achievements}}"></td></tr>
+
+      <tr><td><label><b>about:</b></label></td>
+        <td> <textarea  name="disc" value="{{i.disc}}"></textarea></td></tr>
+
+
+      <tr><td><label><b> experience:</b></label></td>
+    <td><input type="number"  name="exp" value="{{i.experience}}"></td></tr>
+
+
+      <tr><td><label><b> price:</b></label></td>
+    <td><input type="number"  name="price" value="{{i.fprice}}"></td></tr>
+
+
+
+    <tr><td colspan="2"><br>
+      <button type="submit" class="btn">save</button>
+    <button type="button" class="btn cancel" onclick="closea()">Close</button></td></tr>
+
+
+        </table>
+    </form>
+             {% endfor %}
+</div>
+
+</section>
+      <!--headder-->
+      <div class="header-outs " id="home">
+         <div class="header-bar">
+            <!--Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <div class="hedder-up">
+                  <h1><a class="navbar-brand" href="index">ArtsOn</a></h1>
+               </div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+                  <ul class="navbar-nav ">
+                     <li class="nav-item ">
+                        <a class="nav-link text-white" href="../">Home <span class="sr-only">(current)</span></a>
+                     </li>
+
+                     <li class="nav-item active-pink">
+                        <a href="profile2" class="nav-link text-white ">profile</a>
+                     </li>
+
+                      <li class="nav-item ">
+                        <a href="caddprojects" class="nav-link text-white">Add projects</a>
+                     </li>
+                     <li class="nav-item ">
+                        <a href="mbook1" class="nav-link text-white">booking</a>
+                     </li>
+                      <li class="nav-item ">
+                        <a href="logout" class="nav-link text-white">Logout</a>
+                     </li>
+                  </ul>
+
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- //Navigation-->
+      <!--//headder-->
+      <!-- banner -->
+      <div class="inner_page-banner one-img">
+      </div>
+
+
+      <!--//banner -->
+      <!-- short -->
+      <div class="using-border py-3">
+         <div class="inner_breadcrumb  ml-4">
+            <ul class="short_ls">
+               <li>
+                  <a href="index">Home</a>
+                  <span>/ /</span>
+               </li>
+               <li>SignIn</li>
+            </ul>
+         </div>
+      </div>
+      <!-- //short-->
+      <!--contact -->
+  {% if messages %}
+    <div class="alert alert-success alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {% for message in messages %}
+        <p {% if message.tags %} class="{{ message.tags }}"{% endif %}><b>{{ message }}</b></p>
+        {% endfor %}
+    </div>
+{% endif %}
+
+      <br>
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+      <div class="col-xl-12"  style="margin-left:15%; width:900px; background: #fff;">
+                        <div action="" method="post" style="
+                         box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+                         padding:10px;" enctype="multipart/form-data" >
+
+<div class="container emp-profile" style="padding-left:50px;">
+            <form method="post">
+                <div class="row ">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            {% if user.profile %}
+                            <img src="{{user.profile.url}}" alt="no profile" style="width:150px; height:150px">
+                            {% else %}
+                            <img src="static/assets/images/profile.jpg" style="width:150px; height:150px">
+                            {% endif %}
+
+
+                             <div>
+                                <button type="button" class="btn btn-primary mt-5" onclick="openForm()">Edit profile</button>
+                                 {% if data %}
+                                 <button type="button" class="btn btn-primary mt-5 " onclick="opena()">Edit detail</button >
+                                  {% else %}
+                                <button type="button" class="btn btn-primary mt-5" onclick="openFor()">Add details</button>
+                                 {% endif %}
+
+</div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-5"  >
+                        <div class="profile-head">
+                            <br><br>
+                            <h5>{{user.name}}</h5>
+                            <h5>{{user.email}}</h5>
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+<!--                    <div class="col-md-3  justify-content-bottom">-->
+<!--                        <a href="editprofile"  type="submit" class="btn sent-butnn btn-lg"  name="btnAddMore"  style="margin-top:120px">Edit profile-->
+<!--                        </a>-->
+
+
+<!--                    </div>-->
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+<!--                            <p>WORK LINK</p>-->
+<!--                            <a href="">Website Link</a><br/>-->
+<!--                            <a href="">Bootsnipp Profile</a><br/>-->
+<!--                            <a href="">Bootply Profile</a>-->
+<!--                            <p>SKILLS</p>-->
+<!--                            <a href="">Web Designer</a><br/>-->
+<!--                            <a href="">Web Developer</a><br/>-->
+<!--                            <a href="">WordPress</a><br/>-->
+<!--                            <a href="">WooCommerce</a><br/>-->
+<!--                            <a href="">PHP, .Net</a><br/>-->
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>User Id</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{user.username}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Company Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{user.name}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{user.email}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Price</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                {% for i in data7 %}
+                                                <p>{{i.fprice}}</p>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <h4>AboutUs</h4>
+                        {% if data7 %}
+                          {% for i in data7 %}
+                        <br>
+                        <div class="p-4 rounded shadow-sm bg-light"> <p class="font-italic mb-0"><b>Location:
+                        </b>{{i.native}}</p>
+                             <br>
+                            <p class="font-italic mb-0"><b>Specialisation:</b>{{i.special}}</p>
+                           <p class="font-italic mb-0"><b>About</b>{{i.disc}}</p>
+                            <p class="font-italic mb-0"><b>phone no:</b>{{user.phone}}</p>
+                            <br>
+                            </div>
+
+                            {% endfor %}
+
+                               {% else %}
+                    <div class="text-center btn btn-danger">
+                       <h2>please add details</h2>
+                            </div>
+                      {% endif %}
+                    </div>
+                        <br><br>
+                </div>
+          <div class="py-4 px-4 col-md-12">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+            <h4 class="mb-3"> Projects</h4> </div>
+            <div class="row" >
+              {% for i in data2 %}
+              <div class="col-lg-4 mb-4 pr-lg-2">
+              <img src="{{i.projectimage.url}}" alt="" class="groove" style="height:250px;width:250px"></div>
+              {% endfor %}
+
+            </div> </div>
+
+            </form>
+        </div>
+      </div>
+      </div>
+      <script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+function openFor() {
+  document.getElementById("myFor").style.display = "block";
+}
+function opena() {
+  document.getElementById("aForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+function closea() {
+  document.getElementById("aForm").style.display = "none";
+}
+function closeFor() {
+document.getElementById("myFor").style.display = "none";
+}
+
+</script>
+
+
+
+
+
+
+      <!--//contact  -->
+      <!--footer -->
+      <footer class="py-lg-4 py-md-3 py-sm-3 py-3 mt-5">
+         <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+            <div class="row ">
+               <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6 ">
+                  <h4 class="pb-lg-3 pb-3"><a href="index.html">Sway</a></h4>
+                  <div class="bottom-para pb-sm-3 pb-2">
+                     <p>ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla</p>
+                  </div>
+                  <div class="bottom-social pt-2">
+                     <ul>
+                        <li>
+                           <a href="#">
+                           <span class="fab fa-facebook-f"></span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <span class="fab fa-google-plus-g"></span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <span class="fab fa-twitter"></span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class=" col-lg-3 col-md-6 col-sm-6 dance-agile-info">
+                  <h4 class="pb-lg-3 pb-3">Usefull Links</h4>
+                  <nav class="border-line">
+                     <ul class="nav flex-column">
+                        <li class="nav-item active">
+                           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="about.html" class="nav-link ">About</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="class.html" class="nav-link">Class</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="gallery.html" class="nav-link">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6 ">
+                  <h4 class="pb-lg-3 pb-3">Twitter Us</h4>
+                  <div class="bottom-para pb-3">
+                     <p>ultricies nec, pellentesque eu, pretium quis,</p>
+                  </div>
+                  <div class="bottom-para">
+                     <p>ultricies nec, pellentesque eu, pretium quis</p>
+                  </div>
+               </div>
+               <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6">
+                  <h4 class="pb-lg-3 pb-3">Our Posts</h4>
+                  <div class="footer-post d-flex mb-2">
+                     <div class="agileinfo_footer_grid1 mr-2">
+                        <a href="class.html">
+                        <img src="{% static 'assets/images/f1.jpg' %}"  alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                     <div class="agileinfo_footer_grid1 mr-2">
+                        <a href="#">
+                        <img src="{% static 'assets/images/f2.jpg' %}"  alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                     <div class="agileinfo_footer_grid1">
+                        <a href="class.html">
+                        <img src="{% static 'assets/images/f3.jpg' %}"  alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                  </div>
+                  <div class="footer-post d-flex">
+                     <div class="agileinfo_footer_grid1 mr-2">
+                        <a href="class.html">
+                        <img src="{% static 'assets/images/f4.jpg' %}"  alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                     <div class="agileinfo_footer_grid1 mr-2">
+                        <a href="class.html">
+                        <img src="{% static 'assets/images/f5.jpg' %}"  alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                     <div class="agileinfo_footer_grid1">
+                        <a href="class.html">
+                        <img src="{% static 'assets/images/f6.jpg' %}"  alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="copy-agile-right text-center text-white py-2">
+            <p>
+               © 2018 Sway. All Rights Reserved | Design by <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a>
+            </p>
+         </div>
+      </footer>
+      <!--//footer-->
+      <!--js working-->
+      <script src="{% static 'assets/js/jquery-2.2.3.min.js'%}"></script>
+      <!--//js working-->
+      <!-- start-smoth-scrolling -->
+      <script src="{% static 'asstes/js/move-top.js' %}"></script>
+      <script src="{% static 'asstes/js/easing.js' %}"></script>
+      <script>
+         jQuery(document).ready(function ($) {
+         	$(".scroll").click(function (event) {
+         		event.preventDefault();
+         		$('html,body').animate({
+         			scrollTop: $(this.hash).offset().top
+         		}, 900);
+         	});
+         });
+      </script>
+      <!-- start-smoth-scrolling -->
+      <!-- here stars scrolling icon -->
+      <script>
+         $(document).ready(function () {
+
+         	var defaults = {
+         		containerID: 'toTop', // fading element id
+         		containerHoverID: 'toTopHover', // fading element hover id
+         		scrollSpeed: 1200,
+         		easingType: 'linear'
+         	};
+
+
+         	$().UItoTop({
+         		easingType: 'easeOutQuart'
+         	});
+
+         });
+      </script>
+      <!-- //here ends scrolling icon -->
+      <!--bootstrap working-->
+      <script src="{% static 'asstes/js/bootstrap.min.js' %}"></script>
+      <!-- //bootstrap working-->
+   </body>
+</html>

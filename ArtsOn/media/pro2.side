@@ -1,0 +1,42 @@
+{
+  "id": "bbe596fb-9168-410c-b922-f8e1f892b49a",
+  "version": "2.0",
+  "name": "pro1",
+  "url": "https://www.saucedemo.com/v1/",
+  "tests": [{
+    "id": "8452e2b5-5636-46c7-b887-4a4685750e7d",
+    "name": "Untitled",
+    "commands": [{
+      "id": "6073af83-ed08-4926-861a-f349cf237b3a",
+      "comment": "",
+      "command": "click",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e67c2d0-150b-4457-a69a-72608b1fbfb6",
+      "comment": "",
+      "command": "click",
+      "target": "id=user-name",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8617f0c-a8e1-4564-8271-ab2c847d27b3",
+      "comment": "",
+      "command": "type",
+      "target": "id=user-name",
+      "targets": [],
+      "value": "standard_user"
+    }]
+  }],
+  "suites": [{
+    "id": "55b31331-4da6-4292-a10f-49c2dbf5d073",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8452e2b5-5636-46c7-b887-4a4685750e7d"]
+  }],
+  "urls": ["https://www.saucedemo.com/v1/"],
+  "plugins": []
+}

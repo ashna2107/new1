@@ -1,0 +1,429 @@
+<!--A Design by W3layouts
+   Author: W3layout
+   Author URL: http://w3layouts.com
+   License: Creative Commons Attribution 3.0 Unported
+   License URL: http://creativecommons.org/licenses/by/3.0/
+   -->
+<!DOCTYPE html>
+<html lang="zxx" xmlns="http://www.w3.org/1999/html">
+   <head>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+       <style>
+
+    .div1 {
+        background-color: cadetblue;
+
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0px 0;
+      overflow: hidden;
+      background-color:black
+<!--      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);-->
+<!--      border-radius: 10px;-->
+    }
+    th {
+      padding: 15px;
+      spacing:50px
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+
+    }
+     td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      color:white;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #333536;
+      color:black;
+    }
+    tr:nth-child(odd) {
+      background-color: #333536;
+      color:black;
+    }
+
+    tr:hover {
+      background-color: #000000;
+    }
+
+    @media (max-width: 600px) {
+      th, td {
+        font-size: 12px;
+   }
+}
+
+  </style>
+      <style>
+         body{
+
+    background-color:#B3E5FC;
+    border-radius: 10px;
+
+}
+
+
+.card{
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+
+  background-color: #fff;
+}
+
+
+
+.stats{
+
+      background: #f2f5f8 !important;
+
+    color: #000 !important;
+}
+.articles{
+  font-size:10px;
+  color: #a1aab9;
+}
+.number1{
+  font-weight:500;
+}
+.followers{
+    font-size:10px;
+  color: #a1aab9;
+
+}
+.number2{
+  font-weight:500;
+}
+.rating{
+    font-size:10px;
+  color: #a1aab9;
+}
+.number3{
+  font-weight:500;
+}
+      </style>
+       {% load static %}
+      <title>Sway An Entertainment Category Bootstrap Responsive Web Template | Home :: w3layouts</title>
+      <!--meta tags -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="Sway Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+      <script>
+         addEventListener("load", function () {
+         	setTimeout(hideURLbar, 0);
+         }, false);
+
+         function hideURLbar() {
+         	window.scrollTo(0, 1);
+         }
+      </script>
+      <!--//meta tags ends here-->
+      <!--booststrap-->
+      <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
+      <!--//booststrap end-->
+      <!-- font-awesome icons -->
+      <link href="{% static 'assets/css/fontawesome-all.min.css' %}" rel="stylesheet" type="text/css" media="all">
+      <!-- //font-awesome icons -->
+      <!--stylesheets-->
+      <link href="{% static 'assets/css/style.css' %}" rel='stylesheet' type='text/css' media="all">
+      <!--//stylesheets-->
+      <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+      <link href="//fonts.googleapis.com/css?family=Felipa" rel="stylesheet">
+<!--      <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   </head>
+   <body>
+      <!--headder-->
+      <div class="header-outs" id="home">
+         <div class="header-bar">
+            <!--Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <div class="hedder-up">
+                  <h1><a class="navbar-brand" href="index">ArtsOn</a></h1>
+               </div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                  <ul class="navbar-nav ">
+                     <li class="nav-item ">
+                        <a class="nav-link" href="ser">Home <span class="sr-only">(current)</span></a>
+                     </li>
+                      <li class="nav-item active">
+                        <a href="book" class="nav-link">booking</a>
+                     </li>
+                      <li class="nav-item">
+                        <a href="success" class="nav-link">my order</a>
+                     </li>
+                       <li class="nav-item ">
+                        <a href="uprofile" class="nav-link">profile</a>
+                     </li>
+                      <li class="nav-item ">
+                        <a href="../logout" class="nav-link">logout</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- //Navigation-->
+      <!--//headder-->
+      <!-- banner -->
+      <div class="inner_page-banner one-img">
+      </div>
+      <!--//banner -->
+      <!-- short -->
+      <div class="using-border py-3">
+         <div class="inner_breadcrumb  ml-4">
+            <ul class="short_ls">
+               <li>
+                  <a href="index.html">music</a>
+                  <span>/ /</span>
+               </li>
+               <li>Booking</li>
+            </ul>
+         </div>
+      </div>
+      {% if messages %}
+    <div class="alert alert-warning alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {% for message in messages %}
+        <p {% if message.tags %} class="{{ message.tags }}"{% endif %}><b>{{ message }}</b></p>
+        {% endfor %}
+    </div>
+{% endif %}
+
+      <!-- //short-->
+      <!--contact -->
+      <br>
+          <div class="col-xl-12">
+              {% if music %}
+            {% for i in music %}
+              <br>
+              <table>
+            <tr>
+                <th style="border-left: 10px solid #ddd;border-top: 10px solid #ddd;"><h5>Company Name:</h5></th>
+              <th style="border-right: 5px solid #ddd;border-top: 10px solid #ddd;"><h6><input  value="{{i.mname}}" readonly></h6></th>
+
+<td rowspan="7" style="border-right: 10px solid #ddd;border-top: 10px solid #ddd;border-bottom: 10px solid #ddd">
+    <a href="payment/{{i.price}}/{{i.pk}}"><button style="padding:10% 20px" class="btn btn-danger">Payment</button> </a><br>
+      </h3></td>
+            </tr>
+      <tr><td style="border-left: 10px solid #ddd;"><h8>booked on:</h8></td>
+        <td style="border-right: 5px solid #ddd;"><h8><input value="{{i.date}}" readonly></h8></td>
+      </tr>
+      <tr><td style="border-left: 10px solid #ddd;"><h8>price:</h8></td>
+        <td style="border-right: 5px solid #ddd;"><h8><input value="{{i.price}}" readonly></h8></td>
+      </tr>
+      <tr><td style="border-left: 10px solid #ddd;"><h8>date of work:</h8></td>
+        <td style="border-right: 5px solid #ddd;"><h8><input value="{{i.bdate}}" readonly></h8></td>
+      </tr>
+      <tr><td style="border-left: 10px solid #ddd;"><h8>work discription:</h8></td>
+        <td style="border-right: 5px solid #ddd;"><h8><input value="{{i.dis}}" readonly></h8></td>
+      </tr>
+      <tr><td style="border-left: 10px solid #ddd;border-bottom: 10px solid #ddd"><h8>work address:</h8></td>
+        <td style="border-right: 5px solid #ddd;border-bottom: 10px solid #ddd"><h8><input value="{{i.address}}" readonly></h8></td>
+      </tr>
+</table>
+{% endfor %}
+                    <div>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                   </div>
+          {% endif %}
+
+              {% if dance %}
+          {% for i in dance %}
+            <table>
+            <tr>
+                <th style="border-left: 10px solid #ddd;border-top: 10px solid #ddd;"><h5>Company Name:</h5></th>
+              <th style="border-right: 5px solid #ddd;border-top: 10px solid #ddd;"><h6><input  value="{{i.dname}}" readonly></h6></th>
+
+<td rowspan="7" style="border-right: 10px solid #ddd;border-top: 10px solid #ddd;border-bottom: 10px solid #ddd">
+    <a href="payment/{{i.price}}/{{i.pk}}"><button style="padding:10% 20px" class="btn btn-danger">Payment</button> </a><br>
+      </h3></td>
+            </tr>
+      <tr><td style="border-left: 10px solid #ddd;"><h8>booked on:</h8></td>
+        <td style="border-right: 5px solid #ddd;"><h8><input value="{{i.date}}" readonly></h8></td>
+      </tr>
+      <tr><td style="border-left: 10px solid #ddd;"><h8>price:</h8></td>
+        <td style="border-right: 5px solid #ddd;"><h8><input value="{{i.price}}" readonly></h8></td>
+      </tr>
+      <tr><td style="border-left: 10px solid #ddd;"><h8>date of work:</h8></td>
+        <td style="border-right: 5px solid #ddd;"><h8><input value="{{i.bdate}}" readonly></h8></td>
+      </tr>
+      <tr><td style="border-left: 10px solid #ddd;"><h8>work discription:</h8></td>
+        <td style="border-right: 5px solid #ddd;"><h8><input value="{{i.dis}}" readonly></h8></td>
+      </tr>
+      <tr><td style="border-left: 10px solid #ddd;border-bottom: 10px solid #ddd"><h8>work address:</h8></td>
+        <td style="border-right: 5px solid #ddd;border-bottom: 10px solid #ddd"><h8><input value="{{i.address}}" readonly></h8></td>
+      </tr>
+</table>
+
+
+
+      </div>
+      {% endfor %}
+      {% endif %}
+      <br><br>
+</div>
+
+      <!--//contact  -->
+      <!--footer -->
+      <footer class="py-lg-4 py-md-3 py-sm-3 py-3">
+         <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+            <div class="row ">
+               <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6 ">
+                  <h4 class="pb-lg-3 pb-3"><a href="index.html">ArtsOn</a></h4>
+                  <div class="bottom-para pb-sm-3 pb-2">
+                     <p>Discover a world of exceptional dance teAam and musicians on our platform.Effortless booking,
+                        diverse talent, and unforgettable performances.</p>
+                  </div>
+                  <div class="bottom-social pt-2">
+                     <ul>
+                        <li>
+                           <a href="#">
+                           <span class="fab fa-facebook-f"></span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <span class="fab fa-google-plus-g"></span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <span class="fab fa-twitter"></span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class=" col-lg-3 col-md-6 col-sm-6 dance-agile-info">
+                  <h4 class="pb-lg-3 pb-3">Usefull Links</h4>
+                  <nav class="border-line">
+                     <ul class="nav flex-column">
+                        <li class="nav-item active">
+                           <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="about" class="nav-link ">About</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="gallery" class="nav-link">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="contact" class="nav-link">Contact</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6 ">
+                  <h4 class="pb-lg-3 pb-3">Twitter Us</h4>
+                  <div class="bottom-para pb-3">
+                     <p>To dance is to be out of yourself,larger,more beautiful and powerful</p>
+                  </div>
+                  <div class="bottom-para">
+                     <p>The only truth is music</p>
+                  </div>
+               </div>
+               <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6">
+                  <h4 class="pb-lg-3 pb-3">Our Posts</h4>
+                  <div class="footer-post d-flex mb-2">
+                     <div class="agileinfo_footer_grid1 mr-2">
+                        <a href="class.html">
+                        <img src="{% static 'assets/images/f1.jpg' %}" alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                     <div class="agileinfo_footer_grid1 mr-2">
+                        <a href="#">
+                        <img src="{% static 'assets/images/f2.jpg' %}" alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                     <div class="agileinfo_footer_grid1">
+                        <a href="class.html">
+                        <img src="{% static 'assets/images/f3.jpg' %}" alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                  </div>
+                  <div class="footer-post d-flex">
+                     <div class="agileinfo_footer_grid1 mr-2">
+                        <a href="class.html">
+                        <img src="{% static 'assets/images/f4.jpg' %}" alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                     <div class="agileinfo_footer_grid1 mr-2">
+                        <a href="class.html">
+                        <img src="{% static 'assets/images/f5.jpg' %}" alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                     <div class="agileinfo_footer_grid1">
+                        <a href="class.html">
+                        <img src="{% static 'assets/images/f6.jpg' %}" alt=" " class="img-fluid">
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="copy-agile-right text-center text-white py-2">
+            <p>
+               © 2023 ArtsOn. All Rights Reserved | Design by <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a>
+            </p>
+         </div>
+      </footer>
+      <!--//footer-->
+      <!--js working-->
+      <script src="{% static 'assets/js/jquery-2.2.3.min.js'%}"></script>
+      <!--//js working-->
+      <!-- start-smoth-scrolling -->
+      <script src="{% static 'asstes/js/move-top.js' %}"></script>
+      <script src="{% static 'asstes/js/easing.js' %}"></script>
+      <script>
+         jQuery(document).ready(function ($) {
+         	$(".scroll").click(function (event) {
+         		event.preventDefault();
+         		$('html,body').animate({
+         			scrollTop: $(this.hash).offset().top
+         		}, 900);
+         	});
+         });
+      </script>
+      <!-- start-smoth-scrolling -->
+      <!-- here stars scrolling icon -->
+      <script>
+         $(document).ready(function () {
+
+         	var defaults = {
+         		containerID: 'toTop', // fading element id
+         		containerHoverID: 'toTopHover', // fading element hover id
+         		scrollSpeed: 1200,
+         		easingType: 'linear'
+         	};
+
+
+         	$().UItoTop({
+         		easingType: 'easeOutQuart'
+         	});
+
+         });
+      </script>
+      <!-- //here ends scrolling icon -->
+      <!--bootstrap working-->
+      <script src="{% static 'asstes/js/bootstrap.min.js' %}"></script>
+      <!-- //bootstrap working-->
+   </body>
+</html>
